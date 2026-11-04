@@ -890,3 +890,197 @@ body {
     }
 
 }
+
+#planilhaOpenButton {
+    position: fixed;
+    right: 20px;
+    bottom: 18px;
+    z-index: 20000;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 234, 255, 0.55);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.72);
+    color: #9eabb8;
+    font: 11px Arial, Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    opacity: 0.72;
+    transition: 0.2s;
+}
+
+#planilhaOpenButton:hover {
+    opacity: 1;
+    color: #00eaff;
+    border-color: #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.25);
+}
+
+#planilhaSiteOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 30000;
+    display: none;
+    background: #f4f6f8;
+    color: #253044;
+    font-family: Arial, Helvetica, sans-serif;
+    touch-action: pan-y;
+}
+
+#planilhaSiteOverlay.planilha-visible {
+    display: block;
+}
+
+#planilhaSiteOverlay * {
+    box-sizing: border-box;
+}
+
+#planilhaSiteOverlay .ph-top {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9ef;
+    padding: 17px 22px;
+}
+
+#planilhaSiteOverlay .ph-nav {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+#planilhaSiteOverlay .ph-logo {
+    color: #1b7659;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+#planilhaSiteOverlay .ph-links {
+    color: #657184;
+    font-size: 13px;
+}
+
+#planilhaSiteOverlay .ph-page {
+    height: calc(100% - 62px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+}
+
+#planilhaSiteOverlay .ph-article {
+    max-width: 850px;
+    margin: 36px auto 70px;
+    padding: 0 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+#planilhaSiteOverlay .ph-category {
+    color: #21805f;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+#planilhaSiteOverlay h1 {
+    margin: 10px 0 14px;
+    color: #202b3c;
+    font-size: clamp(29px, 5vw, 43px);
+    line-height: 1.16;
+}
+
+#planilhaSiteOverlay .ph-meta {
+    color: #788496;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+#planilhaSiteOverlay h2 {
+    color: #26364b;
+    font-size: 24px;
+    margin: 30px 0 10px;
+}
+
+#planilhaSiteOverlay p {
+    margin: 12px 0;
+}
+
+#planilhaSiteOverlay .ph-callout {
+    margin: 22px 0;
+    padding: 17px 19px;
+    border-left: 4px solid #25805e;
+    background: #e8f4ee;
+    border-radius: 5px;
+}
+
+#planilhaSiteOverlay .ph-table-wrap {
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+#planilhaSiteOverlay table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+#planilhaSiteOverlay th, #planilhaSiteOverlay td {
+    border: 1px solid #dce3e9;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#planilhaSiteOverlay th {
+    background: #edf3f0;
+    color: #315b49;
+}
+
+#planilhaSiteOverlay code {
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: #e9edf2;
+    color: #174f3b;
+    font-family: Consolas, monospace;
+    overflow-wrap: anywhere;
+}
+
+#planilhaSiteOverlay .ph-back {
+    display: inline-block;
+    margin-top: 30px;
+    color: #a4acb8;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#planilhaSiteOverlay .ph-back:hover {
+    color: #25805e;
+    opacity: 1;
+}
+
+#planilhaSiteOverlay .ph-footer {
+    margin-top: 45px;
+    padding: 22px 0;
+    border-top: 1px solid #e0e5ea;
+    color: #8993a1;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    #planilhaOpenButton {
+        right: 12px;
+        bottom: 12px;
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+    #planilhaSiteOverlay .ph-top { padding: 14px 16px; }
+    #planilhaSiteOverlay .ph-logo { font-size: 20px; }
+    #planilhaSiteOverlay .ph-links { font-size: 10px; }
+    #planilhaSiteOverlay .ph-article { margin-top: 25px; padding: 0 18px; font-size: 15px; }
+}
